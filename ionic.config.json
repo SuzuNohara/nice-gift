@@ -1,0 +1,7 @@
+{
+  "name": "interactive-card",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
