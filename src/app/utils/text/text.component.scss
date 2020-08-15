@@ -1,0 +1,23 @@
+.container{
+    width: 100%;
+    display: block;
+    max-height: 60vh;
+    overflow-y: scroll;
+}
+
+.char{
+    margin-left: -0.5vh;
+    margin-right: -0.5vh;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}

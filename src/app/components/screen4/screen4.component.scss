@@ -1,0 +1,10 @@
+.image-container{
+    position: absolute;
+    width: 90vw;
+    height: 50vh;
+    left: 5vw;
+    top: 25vh;
+    background-color: rgba($color: #ffffff, $alpha: 0.4);
+    border-radius: 10px;
+    z-index: 100;
+}

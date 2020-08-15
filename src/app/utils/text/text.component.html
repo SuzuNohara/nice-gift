@@ -1,0 +1,5 @@
+<div class="container" [ngClass]="align">
+  <div class="content">
+    <img class="char" *ngFor="let image of images" [ngStyle]="{height: size + 'vh'}" [src]="image">
+  </div>
+</div>

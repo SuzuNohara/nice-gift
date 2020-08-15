@@ -1,0 +1,38 @@
+<div class="content">
+  <img src="/assets/assets/mountains.png" *ngIf="config.land == 0" class="background-ground">
+  <img src="/assets/assets/building.png" *ngIf="config.land == 1" class="background-ground">
+  <img src="/assets/assets/grass.png" *ngIf="config.land == 2" class="background-ground">
+  <div *ngIf="config.hour == 'night'" class="night-sky"></div>
+  <div *ngIf="config.hour == 'day'" class="day-sky"></div>
+  <img *ngIf="config.moon == 1" src="/assets/assets/quarter-moon.png" alt="" class="moon">
+  <img *ngIf="config.moon == 2" src="/assets/assets/half-moon.png" alt="" class="moon">
+  <img *ngIf="config.moon == 3" src="/assets/assets/full-moon.png" alt="" class="moon">
+  <div class="clouds">
+    <div #cloud1 class="cloud-div"><img src="/assets/assets/cloud1.png" *ngIf="config.clouds >= 1" alt="" class="cloud"></div>
+    <div #cloud2 class="cloud-div"><img src="/assets/assets/cloud2.png" *ngIf="config.clouds >= 2" alt="" class="cloud"></div>
+    <div #cloud3 class="cloud-div"><img src="/assets/assets/cloud3.png" *ngIf="config.clouds >= 3" alt="" class="cloud"></div>
+    <div #cloud4 class="cloud-div"><img src="/assets/assets/cloud4.png" *ngIf="config.clouds >= 4" alt="" class="cloud"></div>
+    <div #cloud5 class="cloud-div"><img src="/assets/assets/cloud5.png" *ngIf="config.clouds >= 5" alt="" class="cloud"></div>
+    <div #cloud6 class="cloud-div"><img src="/assets/assets/cloud6.png" *ngIf="config.clouds >= 6" alt="" class="cloud"></div>
+  </div>
+  <div #rainbow class="rainbow-container">
+    <img *ngIf="config.rainbow" src="/assets/assets/rainbow.png" alt="" class="rainbow">
+  </div>
+  <div #sun class="sun">
+    <img *ngIf="config.sun" src="/assets/assets/sun.png" alt="" class="sun-img">
+  </div>
+</div>
+<div class="relative-content">
+  <div class="header" *ngIf="config.header">
+    <app-text [text]="config.header" [size]="config.header_size" [align]="config.header_align"></app-text>
+  </div>
+  <div class="message" *ngIf="config.message">
+    <app-text #message [text]="config.message" [size]="config.message_size" [align]="config.message_align"></app-text>
+  </div>
+  <div class="footer" *ngIf="config.footer" (click)="footer_action()">
+    <app-text [text]="config.footer" [size]="config.footer_size" [align]="config.footer_align"></app-text>
+  </div>
+  <div class="hearts">
+    <img class="heart" #heart [src]="i % 5 == 0 ? '/assets/assets/bigheart.png' : '/assets/assets/bigheart.png'" [ngStyle]="{left: heart + 'vw', height: (i % 5 == 0 ? 10 : 4) + 'vh'}" *ngFor="let heart of hearts; let i = index">
+  </div>
+</div>
